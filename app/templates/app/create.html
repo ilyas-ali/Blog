@@ -1,0 +1,27 @@
+<form method="POST" action={% url "create" %} enctype="multipart/form-data">
+{% csrf_token %}
+<li>
+<label for="detail">Enter details</label>
+<input type="text" id="detail" name="detail">
+<br>
+</li>
+<li>
+        <label for="image">Upload image </label>
+        <input type="file" id="image" name="image">
+        <br><br>
+    </li>
+<li>
+        
+        <input type="radio" id="private" name="permit" value="private">
+        <label for="private">Private
+        </label>
+
+        <input type="radio" id="public" name="permit" value="public">
+        <label for="public">Public</label>
+        <br><br>
+    </li>
+    <input type="submit">
+</form>
+<br><br>
+<h1>{{message1}}</h1>
+<h2>If you wish to go back <a href={% url "index" %}>Click Here</a></h2>

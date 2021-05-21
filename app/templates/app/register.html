@@ -1,0 +1,25 @@
+<form method="POST" action={% url "register" %}>
+{% csrf_token %}
+<li>
+        <label for="user">Enter Username</label>
+        <input type="Username" id="user" name="user">
+        <br><br>
+</li>
+<li>
+        <label for="pass">Enter Password </label>
+        <input type="password" id="pass" name="pass">
+        <br><br>
+    </li>
+
+    <li>
+        <label for="pass1">Confirm password </label>
+        <input type="password" id="pass1" name="pass1">
+        <br><br>
+    </li>
+
+    <input type="submit">
+</form>
+<br><br>
+<h1>{{message1}}</h1>
+
+<h1>If user already exists then <a href={% url 'lin' %}>Click here </a></h1>

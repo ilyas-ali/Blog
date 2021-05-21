@@ -1,0 +1,18 @@
+<form method="POST" action={% url "lin" %}>
+{% csrf_token %}
+<li>
+<label for="user">Enter Username</label>
+<input type="Username" id="user" name="user">
+<br>
+</li>
+<li>
+        <label for="pass">Enter Password </label>
+        <input type="password" id="pass" name="pass">
+        <br><br>
+    </li>
+
+    <input type="submit">
+</form>
+<br><br>
+<h1>{{message1}}</h1>
+<h2>If you wish to register <a href={% url "register" %}>Click Here</a></h2>

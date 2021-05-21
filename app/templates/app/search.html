@@ -1,0 +1,12 @@
+<form method="POST" action={% url "search" %}>
+{% csrf_token %}
+<li>
+<label for="username">Enter username</label>
+<input type="username" id="username" name="username">
+<br>
+</li>
+    <input type="submit">
+</form>
+<br><br>
+<h1>{{message1}}</h1>
+<h2>If you wish to go back to your profile<a href={% url "index" %}>Click Here</a></h2>

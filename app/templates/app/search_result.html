@@ -1,0 +1,15 @@
+<ul>
+{% for pro in profile %}
+<li>
+{{pro.detail}} 
+<img src="{{ pro.image.url }}" width="100" height="100" >
+
+</li>
+{% endfor %}
+</ul>
+
+<h2>If you wish to go back to your profile<a href={% url "index" %}>Click Here</a></h2>
+
+<h2>If you wish to search someone else's blog <a href={% url "search" %}>Click Here</a></h2>
+<br><br>
+<h2>If you wish to logout <a href={% url "log" %}>Click Here</a></h2>
