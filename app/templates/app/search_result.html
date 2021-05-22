@@ -1,8 +1,23 @@
+{% extends 'app/base.html' %}
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Result</title>
+    
+</head>
+{% block body %}
+<body>
+<h1> The blogs of {{user}} are as follows</h1>
 <ul>
 {% for pro in profile %}
 <li>
-{{pro.detail}} 
+{{pro.detail}}
 <img src="{{ pro.image.url }}" width="100" height="100" >
+(Public)
 
 </li>
 {% endfor %}
@@ -13,3 +28,6 @@
 <h2>If you wish to search someone else's blog <a href={% url "search" %}>Click Here</a></h2>
 <br><br>
 <h2>If you wish to logout <a href={% url "log" %}>Click Here</a></h2>
+</body>
+</html>
+{%endblock%}

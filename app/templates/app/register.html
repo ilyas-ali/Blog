@@ -1,25 +1,38 @@
-<form method="POST" action={% url "register" %}>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Register{%endblock%}</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+<form method="POST" action={% url "register" %} >
 {% csrf_token %}
-<li>
-        <label for="user">Enter Username</label>
-        <input type="Username" id="user" name="user">
-        <br><br>
-</li>
-<li>
-        <label for="pass">Enter Password </label>
-        <input type="password" id="pass" name="pass">
-        <br><br>
-    </li>
-
-    <li>
-        <label for="pass1">Confirm password </label>
-        <input type="password" id="pass1" name="pass1">
-        <br><br>
-    </li>
-
+{% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
     <input type="submit">
 </form>
 <br><br>
 <h1>{{message1}}</h1>
 
 <h1>If user already exists then <a href={% url 'lin' %}>Click here </a></h1>
+</body>
+ 
+</html>

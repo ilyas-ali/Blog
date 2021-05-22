@@ -1,3 +1,17 @@
+{% extends 'app/base.html' %}
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create new blog</title>
+    
+</head>
+
+{% block body %}
+
 <form method="POST" action={% url "create" %} enctype="multipart/form-data">
 {% csrf_token %}
 <li>
@@ -24,4 +38,6 @@
 </form>
 <br><br>
 <h1>{{message1}}</h1>
-<h2>If you wish to go back <a href={% url "index" %}>Click Here</a></h2>
+<!--<h2>If you wish to go back <a href={% url "index" %}>Click Here</a></h2>-->
+{%endblock%}
+</html>

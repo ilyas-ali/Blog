@@ -1,4 +1,14 @@
 asgiref==3.3.4
 Django==3.2.3
+django-math-captcha==0.1
+django-simple-math-captcha==1.0.9
+django-utils-six==2.0
+pytz==2021.1
+sqlparse==0.4.1
+asgiref==3.3.4
+Django==3.2.3
+django-math-captcha==0.1
+django-simple-math-captcha==1.0.9
+django-utils-six==2.0
 pytz==2021.1
 sqlparse==0.4.1

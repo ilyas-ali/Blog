@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Login{%endblock%}</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+
+<body>
 <form method="POST" action={% url "lin" %}>
 {% csrf_token %}
 <li>
@@ -16,3 +34,5 @@
 <br><br>
 <h1>{{message1}}</h1>
 <h2>If you wish to register <a href={% url "register" %}>Click Here</a></h2>
+</body>
+</html>
